@@ -14,10 +14,11 @@
 
 #### transform-api
 
-[com.android.tools.build:transform-api](http://tools.android.com/tech-docs/new-build-system/transform-api)
-[Transform API打包](https://www.jianshu.com/p/811b0d0975ef)
-[Android动态编译技术](http://www.aoaoyi.com/archives/1272.html)
-[Android中Gradle插件和Transform](https://www.jianshu.com/p/49425d46ea4f)
+- [com.android.tools.build:transform-api](http://tools.android.com/tech-docs/new-build-system/transform-api)
+- [Transform API打包](https://www.jianshu.com/p/811b0d0975ef)
+- [Android动态编译技术](http://www.aoaoyi.com/archives/1272.html)
+- [Android中Gradle插件和Transform](https://www.jianshu.com/p/49425d46ea4f)
 
 https://mvnrepository.com/artifact/com.android.tools.build/transform-api
+
 https://plugins.gradle.org/plugin/org.jetbrains.kotlin.android

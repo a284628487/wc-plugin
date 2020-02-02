@@ -6,12 +6,17 @@ import com.android.build.api.transform.Transform
 import com.android.build.api.transform.TransformException
 import com.android.build.api.transform.TransformInput
 import com.android.build.api.transform.TransformOutputProvider
+import com.android.build.gradle.internal.pipeline.TransformManager
+import org.gradle.api.Project
 
 class WcTransform extends Transform {
 
     final static String TAG = "WcTransform"
 
-    public WcTransform() {
+    private Project project
+
+    public WcTransform(Project project) {
+        this.project = project
         println("${TAG}.init")
     }
 
@@ -28,11 +33,7 @@ class WcTransform extends Transform {
 
     @Override
     Set<QualifiedContent.Scope> getScopes() {
-        return new HashSet<QualifiedContent.Scope>(
-                Arrays.asList(QualifiedContent.Scope.PROJECT,
-                        QualifiedContent.Scope.SUB_PROJECTS,
-                        QualifiedContent.Scope.EXTERNAL_LIBRARIES,
-                ))
+        return TransformManager.SCOPE_FULL_PROJECT
     }
 
     @Override

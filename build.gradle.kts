@@ -8,7 +8,7 @@ plugins {
     `maven-publish`
 }
 
-val pluginVersion = "0.0.4"
+val pluginVersion = "0.0.10"
 group = "com.ccf.wc"
 version = pluginVersion
 
