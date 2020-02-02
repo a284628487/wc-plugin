@@ -8,11 +8,13 @@ plugins {
     `maven-publish`
 }
 
-val pluginVersion = "0.0.3"
+val pluginVersion = "0.0.4"
 group = "com.ccf.wc"
 version = pluginVersion
 
 repositories {
+    google()
+    jcenter()
     mavenCentral()
     maven {
         credentials {
@@ -25,6 +27,8 @@ repositories {
 
 dependencies {
     compile("org.codehaus.groovy:groovy-all:2.5.4")
+    // implementation("com.android.tools.build:transform-api:1.5.0")
+    implementation("com.android.tools.build:gradle:3.1.2")
     implementation(kotlin("stdlib-jdk8"))
     implementation(gradleApi())
     implementation(localGroovy())

@@ -1,5 +1,6 @@
 package com.ccf.wc.plugin
 
+import com.android.build.gradle.BaseExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
@@ -8,6 +9,9 @@ class WcPlugin implements Plugin<Project> {
     @Override
     void apply(Project project) {
         println("WcPlugin.apply......")
+
+        BaseExtension extension = project.extensions.findByType(BaseExtension.class)
+        extension.registerTransform(new WcTransform())
 
         project.tasks.create("WcBuild", BuildTask)
 
